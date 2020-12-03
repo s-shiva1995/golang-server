@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="../views/styles.css" />
+		<script src="../views/scripts.js"></script>
+	</head>
+	<body>
+		<form action="/login" method="post">
+			<input
+				type="text"
+				name="username"
+				placeholder="Email address or Phone number"
+				required
+				onblur="isValidName(this.value)"
+			>
+			<span class="errorText" id="errorname"></span>
+			<input
+				type="password"
+				name="password"
+				placeholder="Password"
+				required
+				onblur="isValidPassword(this.value)"
+			>
+			<span class="errorText" id="errorpassword"></span>
+			<input type="submit" value="Login">
+			<hr />
+
+			<input type="button" value="Create new account">
+		</form>
+	</body>
+</html>
